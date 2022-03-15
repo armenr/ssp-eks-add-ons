@@ -5,12 +5,12 @@ account: ""
 clusterName: ""
 
 # Agones Values
-agones: 
-  enable: false 
+agones:
+  enable: false
 
 # App Mesh Values
-appMesh: 
-  enable: false 
+appMesh:
+  enable: false
 
 # Calico Values
 awsCalico:
@@ -27,7 +27,7 @@ awsEfsCsiDriver:
 # AWS for Fluent Bit Values
 awsForFluentBit:
   enable: false
-  logGroupName: 
+  logGroupName:
 
 # AWS Load Balancer Controller Values
 awsLoadBalancerController:
@@ -41,7 +41,7 @@ awsOtelCollector:
 # Cert Manager Values
 certManager:
   enable: false
- 
+
 # Cluster Autoscaler Values
 clusterAutoscaler:
   enable: false
@@ -53,7 +53,7 @@ externalDns:
   zoneIdFilters: []
 
 # Gatekeeper Values
-gatekeeper: 
+gatekeeper:
   enable: false
 
 # Nginx Values
@@ -61,16 +61,15 @@ ingressNginx:
   enable: false
 
 # Karpenter Values
-karpenter: 
+karpenter:
   enable: false
   serviceAccountName:
   controllerClusterName:
   controllerClusterEndpoint:
   awsDefaultInstanceProfile:
 
-
 # Keda Values
-keda: 
+keda:
   enable: false
   serviceAccountName:
 
@@ -82,7 +81,7 @@ metricsServer:
 prometheus:
   enable: false
   serviceAccountName:
-  roleArn: 
+  roleArn:
   ampWorkspaceUrl:
 
 # Metrics Server Values
@@ -94,15 +93,15 @@ traefik:
   enable: false
 
 # VPA Values
-vpa: 
+vpa:
   enable: false
-  serviceAccountName: 
+  serviceAccountName:
 
 # Yunikorn Values
-yunikorn: 
+yunikorn:
   enable: false
-  serviceAccountName: 
-  operatorPlugins: 
+  serviceAccountName:
+  operatorPlugins:
   serviceType:
   embedAdmissionController:
 

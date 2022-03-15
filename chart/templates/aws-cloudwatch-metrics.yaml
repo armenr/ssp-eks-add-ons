@@ -2,17 +2,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aws-cloudwatch-metrics 
+  name: aws-cloudwatch-metrics
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io    
+  # finalizers:
+  # - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
     repoURL: {{ .Values.repo_url }}
-    path: add-ons/aws-cloudwatch-metrics 
+    path: add-ons/aws-cloudwatch-metrics
     targetRevision: HEAD
-    helm: 
+    helm:
       parameters:
       - name: aws-cloudwatch-metrics.clusterName
         value: {{ .Values.clusterName }}
@@ -21,13 +21,13 @@ spec:
     namespace: amazon-cloudwatch
   syncPolicy:
     automated:
-      prune: true    
+      prune: true
     syncOptions:
-    - CreateNamespace=true 
+    - CreateNamespace=true
     retry:
       limit: 1
       backoff:
-        duration: 5s 
-        factor: 2 
-        maxDuration: 1m  
+        duration: 5s
+        factor: 2
+        maxDuration: 1m
 {{- end -}}
